@@ -1,18 +1,12 @@
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 public class Main {
 
     public static void main(String[] args) {
 
         WordsChecker wordsChecker = new WordsChecker(text);
 
-        Set<String> set = new HashSet<>(List.of(text.split("\\P{IsAlphabetic}+")));
-
-        System.out.println(wordsChecker.hasWord(set.contains("amet")));
-        System.out.println(wordsChecker.hasWord(set.contains("Pasha")));
-        System.out.println(wordsChecker.hasWord(set.contains("Excepteur")));
+        System.out.println(wordsChecker.hasWord("amet"));
+        System.out.println(wordsChecker.hasWord("Pasha"));
+        System.out.println(wordsChecker.hasWord("Excepteur"));
 
     }
 

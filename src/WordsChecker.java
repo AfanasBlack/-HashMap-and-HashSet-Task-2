@@ -1,16 +1,16 @@
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class WordsChecker {
 
-    protected String text;
+    protected Set<String> words;
 
     public WordsChecker(String text) {
-        this.text = text;
+        this.words = new HashSet<>(List.of(text.split("\\P{IsAlphabetic}+")));
     }
 
-    public boolean hasWord (boolean word) {
-        if (word) {
-            return true;
-        } else {
-            return false;
-        }
+    public boolean hasWord (String word) {
+        return words.contains(word);
     }
 }
